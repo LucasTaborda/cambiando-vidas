@@ -1,0 +1,117 @@
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 80px;
+    background-color: var(--color-secondary);
+    border-bottom-right-radius: 100%;
+    transition: width 0.5s ease, height 0.5s ease, border-radius 0.5s ease;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.menu-container.active {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+ }
+
+.burger {
+    width: 30px;
+    height: 24px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+    position: relative;
+}
+
+.burger-line {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.menu-container.active .line1 {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+}
+
+.menu-container.active .line2 {
+    opacity: 0;
+}
+
+.menu-container.active .line3 {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -10px;
+}
+
+.menu-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:0;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.menu-container.active .menu-content {
+    opacity: 1;
+}
+
+.menu-content.closing {
+    opacity: 0;
+}
+  
+
+.menu-content a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+.menu-content ul li{
+    padding-bottom: 20px;
+}
+
+/*media queries*/
+@media (max-width: 768px) {
+    .menu-container {
+        width: 60px;
+        height: 60px;
+    }
+    .burger{
+        margin: 10px;
+    }
+}

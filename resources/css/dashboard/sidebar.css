@@ -1,0 +1,30 @@
+.dashboard aside{
+    background-color: var(--color-black);
+    padding-right: 0;
+    height: auto;
+    min-height: 90vh;
+}
+
+.dashboard aside ul{
+    margin:20px 0;
+    padding: 0 10px;
+}
+
+.dashboard aside li{
+    padding: 10px;
+    list-style-type: none;
+    border-radius: 10px;
+
+    a{
+        text-decoration: none;
+        color: var(--color-white);
+    }
+}
+
+.dashboard aside .active{
+    background-color:rgb(245, 243, 243);
+
+    a{
+        color: var(--color-black);
+    }
+}

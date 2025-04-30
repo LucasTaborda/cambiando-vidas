@@ -1,0 +1,4 @@
+.dashboard .ck-content.ck-blurred,
+.dashboard .ck-content.ck-focused {
+    height:300px;
+}

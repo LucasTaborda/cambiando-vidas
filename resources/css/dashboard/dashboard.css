@@ -1,0 +1,39 @@
+
+@import './preset.css';
+@import './sidebar.css';
+@import './header.css';
+@import './editor.css';
+
+body.dashboard{
+    background-color:rgb(245, 243, 243);
+}
+
+.dashboard main{
+    padding: 20px 40px;
+}
+
+.dashboard .list-group-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.dashboard .list-group-item .action-buttons{
+    display: flex;
+    gap: 5px;
+    align-content: center;
+    flex-wrap: wrap;
+    a{
+        height: fit-content;
+    }
+}
+
+.dashboard .search-form{
+    display: flex;
+    gap:10px;
+    margin-bottom: 20px;
+}
+
+.dashboard .alert ul{
+    margin-bottom:0;
+}
