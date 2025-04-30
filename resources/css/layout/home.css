@@ -153,4 +153,64 @@
 
     }
 
+    @media(max-width: 1336px){
+        .main-card{
+            width: 100%;
+        }
+
+        .card-group{
+            grid-template-columns: auto auto;
+            /* Centro las tarjetas para la que quede sola no quede en un costado: */
+            justify-content: center;
+        }
+
+        .card-group > :nth-child(1) {
+            grid-column: 1 / -1; /* Hace que el 3er ítem ocupe ambas columnas */
+            justify-self: center; /* Centra el ítem dentro de ese espacio */
+          }
+    }
+
+    @media(max-width: 1024px){
+        .main-card{
+            grid-template-columns: 1fr;
+            .card-image-container{
+                height: 300px;
+            }
+        }
+    }
+
+    @media(max-width: 768px){
+        .card-group{
+            grid-template-columns: 1fr;
+
+            .card{
+                justify-self: center; 
+            }
+        }
+
+        .two-columns{
+            grid-template-columns: 1fr;
+
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+
+    @media(max-width: 600px){
+        .card-group .card{
+            justify-self: unset;
+        }
+
+        .main-card{
+            .card-image-container{
+
+            }
+
+            h2{
+                font-size: 2.5rem;
+            }
+        }
+    }
+
 }

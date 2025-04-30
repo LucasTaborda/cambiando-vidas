@@ -43,7 +43,27 @@ body{
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+
 }
+
+@media (max-width: 1336px) {
+    .container{
+        max-width: 1024px;    
+    }
+}
+
+@media (max-width: 1024px) {
+    .container{
+        max-width: 768px;    
+    }
+}
+
+@media (max-width: 768px) {
+    .container{
+        max-width: 90%;    
+    }
+}
+
 
 .button{
     border:1px solid black;

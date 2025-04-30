@@ -80,4 +80,17 @@
         display: none;
     }
     
+    @media(max-width: 768px){
+        .navs{
+            display: none;
+        }
+
+        #web-title{
+            font-size: 20px;
+        }
+
+        .burger{
+            display: block;
+        }
+    }
 }

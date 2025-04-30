@@ -34,4 +34,10 @@ footer{
         list-style-type: none;
         margin: 10px 0;
     }
+
+    @media (max-width: 768px){
+        .footer-grid{
+            grid-template-columns: 1fr;
+        }
+    }
 }
