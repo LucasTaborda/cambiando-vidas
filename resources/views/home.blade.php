@@ -36,7 +36,7 @@
                         <img src="{{ asset('images/veterinarian-2.png') }}" >
                     </div>
                     <p>Atención veterinaria</p>
-                    <a class="button" href="#">Donar</a>
+                    <a class="button" href="/donaciones">Donar</a>
                 </div>
         
                 <div class="card card-red">
@@ -44,7 +44,7 @@
                         <img src="{{ asset('images/vaccine-2.png') }}" >
                     </div>
                     <p>Vacunación</p>
-                    <a class="button" href="#">Donar</a>
+                    <a class="button" href="/donaciones">Donar</a>
                 </div>
         
                 <div class="card card-blue">
@@ -52,7 +52,7 @@
                         <img src="{{ asset('images/food.png') }}" >
                     </div>
                     <p>Alimento</p>
-                    <a class="button" href="#">Donar</a>
+                    <a class="button" href="/donaciones">Donar</a>
                 </div>
             </div>        
         </div>

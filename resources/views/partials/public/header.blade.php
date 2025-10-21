@@ -1,5 +1,3 @@
-
-
 <header class="web-header">
     <div id="title-logo">
         <img src="{{ asset('images/logo.png') }}" alt="logo" id="web-logo">
@@ -28,24 +26,27 @@
     </div>       
 </header>
 
+<div class="overlay-nav-menu" id="overlay-nav-menu">
+    <div class="close-icon" id="nav-close-icon">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <ul class="main-nav-list">
+        @foreach($menuLinks as $menuLink)
+            <li><a href="{{ $menuLink->url }}">{{ $menuLink->name }}</a></li>
+        @endforeach
+    </ul>
+</div>
+
 <script>
-    const menu = document.getElementById('menu');
+    const menu = document.getElementById('overlay-nav-menu');
+    const closeIcon = document.getElementById('nav-close-icon');
     const burger = document.getElementById('burger');
-    const menuContent = document.getElementById('menuContent');
 
     burger.addEventListener('click', () => {
-    if (menu.classList.contains('active')) {
-        // Si está abierto, primero empezamos el cierre
-        menuContent.classList.add('closing');
-        menu.classList.remove('active');
-
-        setTimeout(() => {
-            menuContent.classList.remove('closing');
-        }, 500); // Tiempo del fade-out
-    } else {
-        // Si está cerrado, abrimos directamente
         menu.classList.add('active');
-    }
-    });
-</script>
+    })
 
+    closeIcon.addEventListener('click', () => {
+        menu.classList.remove('active');
+    })
+</script>

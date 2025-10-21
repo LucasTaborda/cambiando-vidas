@@ -14,5 +14,13 @@ main{
     h1 {
         text-align: center;
         font-size: 64px;
+        text-wrap: balance;
+    }
+
+    @media(max-width:600px)
+    {
+        h1{
+            font-size: 35px;
+        }
     }
 }
