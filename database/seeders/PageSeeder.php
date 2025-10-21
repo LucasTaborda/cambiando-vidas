@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Page;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\File;
 
 class PageSeeder extends Seeder
 {
@@ -13,13 +14,20 @@ class PageSeeder extends Seeder
      */
     public function run(): void
     {
-        $page = new Page();
-        $page->title = 'Sobre nosotros';
-        $page->content = 'This is the home page';
-        $page->slug = 'sobre-nosotros';
-        $page->save();
+        $pages = [
+            ['title' => 'Sobre nosotros', 'slug' => 'sobre-nosotros', 'file' => 'about-us.html'],
+            ['title' => 'Donaciones', 'slug' => 'donaciones', 'file' => 'donations.html'],
+            ['title' => 'Qué hacer en caso de maltrato animal', 'slug' => 'maltrato-animal', 'file' => 'animal-cruelty.html'],
 
-        //uso factory:
-        Page::factory(50)->create();
+        ];
+
+        foreach ($pages as $page) {
+            $path = database_path('seeders/data/pages/' . $page['file']);
+            $p = new Page();
+            $p->title = $page['title'];
+            $p->content = File::get($path);
+            $p->slug = $page['slug'];
+            $p->save();
+        }
     }
 }

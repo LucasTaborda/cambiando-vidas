@@ -3,7 +3,7 @@
 @section('title', 'Inicio')
 
 @section('content')
-    <h1>Galería</h1>
+    <h1>Vidas Cambiadas</h1>
     <div class="gallery">
         @foreach($galleryImages as $galleryImage)
         <div>

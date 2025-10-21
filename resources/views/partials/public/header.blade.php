@@ -8,17 +8,15 @@
     <div class="navs">
         <nav class="main-nav" id="menuContent">
             <ul class="main-nav-list">
-                <li><a href="/">Adoptar</a></li>
-                <li><a href="/">Donar</a></li>
-                <li><a href="/gallery">Vidas cambiadas</a></li>
-                <li><a href="/servicios">Sobre nosotros</a></li>
-                <li><a href="/contacto">Contacto</a></li>
+                @foreach($menuLinks as $menuLink)
+                    <li><a href="{{ $menuLink->url }}">{{ $menuLink->name }}</a></li>
+                @endforeach
             </ul>
         </nav> 
         <nav class="social-nav">
             <ul class="social-nav-list">
                 <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
             </ul>
         </nav>
     </div>

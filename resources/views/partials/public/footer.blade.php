@@ -3,22 +3,19 @@
         <div class="footer-col">
             <img src="{{ asset('images/logo.png') }}" alt="" id="footer-logo">
             <h2>Cambiando Vidas</h2>
-            <p>&copy; {{ date('Y') }} Mi sitio. Todos los derechos reservados.</p>        
+            <p>&copy; {{ date('Y') }} Cambiando Vidas ONG. Todos los derechos reservados.</p>        
         </div>
         <div class="footer-col">
-            <h3>Teléfonos de contacto</h3>
+            <h3>Contacto</h3>
             <ul>
-                <li>+54 9 11 2345-6789</li>
-                <li>+54 9 11 2345-6789</li>
-                <li>+54 9 11 2345-6789</li>
+                <li><a href="https://wa.me/5491131808429" target="_blank" >+54 9 11 3180 8429</a></li>
             </ul>
         </div>
         <div class="footer-col">
             <h3>Redes sociales</h3>
             <ul>
                 <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Twitter</li>
+                <li><a href="https://www.instagram.com/cambiandovidas.ar/" target="_blank">Instagram</a></li>
             </ul>
         </div>
     </div>

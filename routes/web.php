@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GalleryImageController;
+use App\Http\Controllers\MenuLinkController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,8 @@ Route::get('/gallery-images/create', [GalleryImageController::class, 'create']);
 Route::post('/gallery-images', [GalleryImageController::class, 'store']);
 Route::put('/gallery-images/{id}', [GalleryImageController::class, 'update']);
 Route::get('/gallery', [GalleryImageController::class, 'showGallery']);
+
+Route::get('/menu-links', [MenuLinkController::class, 'index'])->name('menu-links.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

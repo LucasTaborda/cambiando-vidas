@@ -6,6 +6,10 @@
 @section('title', 'Inicio')
 
 @section('content')
+    <a href="https://wa.me/5491131808429" target="_blank" class="whatsapp-float">
+        {!! file_get_contents(public_path('images/whatsapp.svg')) !!}
+    </a>
+  
     <section class="no-border first-section">
         <div class="container">
             <div class="card main-card">
