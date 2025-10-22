@@ -6,5 +6,11 @@
         <li class="{{ request()->is('gallery-images') ? 'active' : '' }}">
             <a href="/gallery-images"><i class="fa-solid fa-camera"></i> Galería</a>
         </li>
+        <li class="{{ request()->is('menu-links') ? 'active' : '' }}">
+            <a href="/menu-links"><i class="fa-solid fa-list"></i> Menú</a>
+        </li>
+        <li>
+            <a href="/"><i class="fa-solid fa-right-from-bracket"></i> Volver a la web</a>
+        </li>
     </ul>
 </aside>

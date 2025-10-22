@@ -1,0 +1,27 @@
+.auth{
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center;     /* centra vertical */
+    height: 100vh;           /* ocupa todo el alto visible */
+    margin: 0;
+    
+    .logo{
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        display: block;
+    }
+
+    form{
+        max-width: 600px;
+        margin: auto;
+
+        input{
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+        };
+    }
+}

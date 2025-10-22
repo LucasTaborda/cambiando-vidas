@@ -17,10 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/panel', function () {
+    return view('panel');
+});
+
 Route::get('/pages', [PageController::class, 'index'])->name('pages.index');
 Route::get('/pages/{id}/edit', [PageController::class, 'edit']);
 Route::get('/pages/create', [PageController::class, 'create']);
 Route::put('/pages/{id}', [PageController::class, 'update']);
+Route::delete('/pages/{id}', [PageController::class, 'destroy'])->name('pages.destroy');
 Route::post('/pages', [PageController::class, 'store']);
 
 Route::get('/gallery-images', [GalleryImageController::class, 'index'])->name('gallery-images.index');
@@ -28,7 +33,7 @@ Route::get('/gallery-images/{id}/edit', [GalleryImageController::class, 'edit'])
 Route::get('/gallery-images/create', [GalleryImageController::class, 'create']);
 Route::post('/gallery-images', [GalleryImageController::class, 'store']);
 Route::put('/gallery-images/{id}', [GalleryImageController::class, 'update']);
-Route::get('/gallery', [GalleryImageController::class, 'showGallery']);
+Route::get('/vidas-cambiadas', [GalleryImageController::class, 'showGallery']);
 
 Route::get('/menu-links', [MenuLinkController::class, 'index'])->name('menu-links.index');
 

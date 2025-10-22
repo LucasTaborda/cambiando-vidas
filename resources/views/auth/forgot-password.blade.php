@@ -1,6 +1,40 @@
-<x-guest-layout>
+@extends('layouts.auth')
+
+@section('title', 'Login')
+
+@section('content')
+<div class="container">
+
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    <div class="card">
+        <div class="card-body">
+            <img src="{{ asset('images/logo.jpg') }}" alt="logo" class=logo>
+            <h1 class="card-title text-center">Recuperar contraseña</h1>
+            <div class="login-page">
+                <form method="POST" action="{{ route('password.email')}}">
+                    @csrf
+                    <input type="text" name="email" placeholder="Email" class="form-control">
+                    <button type="submit" class="btn btn-primary">Enviar enlace de recuperación</button>
+                </form>
+            </div>        
+        </div>
+    </div>
+</div>
+
+
+@endsection
+
+{{-- <x-guest-layout>
     <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
     </div>
 
     <!-- Session Status -->
@@ -22,4 +56,4 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+</x-guest-layout> --}}

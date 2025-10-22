@@ -16,7 +16,7 @@ class MenuLinkSeeder extends Seeder
         $menuLinksData = [
             ['name' => 'Adoptar', 'url' => '#', 'weight' => 0],
             ['name' => 'Donar', 'url' => '/donaciones', 'weight' => 10],
-            ['name' => 'Vidas Cambiadas', 'url' => '/gallery', 'weight' => 20],
+            ['name' => 'Vidas Cambiadas', 'url' => '/vidas-cambiadas', 'weight' => 20],
             ['name' => 'Maltrato animal', 'url' => '/maltrato-animal', 'weight' => 30],
             ['name' => 'Sobre nosotros', 'url' => '/sobre-nosotros', 'weight' => 40],
         ];
